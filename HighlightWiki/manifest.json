@@ -1,0 +1,20 @@
+{
+  "name": "Highlight Wiki",
+  "version": "0.7",
+  "manifest_version":2,
+  "icons":{
+            "16":"Highlighter Yellow.png",
+            "48":"Highlighter Yellow48.png",
+            "128":"Highlighter Yellow128.png"
+          },
+  "browser_action": {
+                      "default_icon":"Highlighter Yellow.png"
+                    },
+  "description" : "Allows a user to highlight text in Wikipedia pages and add notes for later references.",
+  "content_scripts":[
+                      {
+                        "matches": ["http://*.wikipedia.org/*"],
+                        "js" : ["jquery.js", "highlightWiki.js"]
+                      }
+                    ]
+}
