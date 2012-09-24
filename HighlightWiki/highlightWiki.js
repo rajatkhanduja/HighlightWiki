@@ -15,7 +15,7 @@ $(document).mouseup(function(event)
 })
 
 $(function(){
-  alert ("working");
+  console.error ("working");
 });
 
 

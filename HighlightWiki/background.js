@@ -1,5 +1,5 @@
-<script>
 var seltext = null;
+alert ("asd");
  
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse)
 {
@@ -28,8 +28,6 @@ var contexts = ["selection"];
 for (var i = 0; i < contexts.length; i++)
 {
   var context = contexts[i];
-  alert (context);
   chrome.contextMenus.create({"title": "Send to Server", "contexts":[context], "onclick": savetext});  
 }
  
-</script>

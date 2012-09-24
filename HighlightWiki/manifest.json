@@ -10,6 +10,7 @@
   "browser_action": {
                       "default_icon":"Highlighter Yellow.png"
                     },
+  "background": {"scripts":["background.js"]},
   "description" : "Allows a user to highlight text in Wikipedia pages and add notes for later references.",
   "permissions" : [ "contextMenus", 
                     "tabs"],
