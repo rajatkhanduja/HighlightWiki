@@ -11,9 +11,12 @@
                       "default_icon":"Highlighter Yellow.png"
                     },
   "description" : "Allows a user to highlight text in Wikipedia pages and add notes for later references.",
+  "permissions" : [ "contextMenus", 
+                    "tabs"],
   "content_scripts":[
                       {
-                        "matches": ["http://*.wikipedia.org/*"],
+                        "matches": ["http://*.wikipedia.org/*", 
+                                    "https://*.wikipedia.org/*"],
                         "js" : ["jquery.js", "highlightWiki.js"]
                       }
                     ]
