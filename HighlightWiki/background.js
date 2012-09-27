@@ -1,13 +1,14 @@
-var seltext = null;
+var range = null;
 alert ("asd");
  
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse)
-{
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse){
+  console.error ("Listening.");
   switch(request.message)
   {
     case 'setText':
-      window.seltext = request.data
-    break;
+      alert ("received");
+      range = request.data;
+      break;
      
     default:
       sendResponse({data: 'Invalid arguments'});
@@ -28,6 +29,6 @@ var contexts = ["selection"];
 for (var i = 0; i < contexts.length; i++)
 {
   var context = contexts[i];
-  chrome.contextMenus.create({"title": "Send to Server", "contexts":[context], "onclick": savetext});  
+  chrome.contextMenus.create({"title": "Highlight", "contexts":[context], "onclick": savetext});  
 }
  
